@@ -33,7 +33,7 @@ Prototype Refactor
   
   class GameObject {
     constructor(Object){
-        super(Object);
+        
         this.createdAt = Object.createdAt;
         this.name = Object.name;
         this.dimensions = Object.dimensions;
@@ -65,7 +65,7 @@ Prototype Refactor
 //   }
   
   
-  class CharacterStats{
+  class CharacterStats extends GameObject {
       constructor(Stats){
           super(Stats);
           this.healthPoints =Stats.healthPoints;
@@ -109,7 +109,7 @@ Prototype Refactor
 //      return `${this.name} offers a greeting in ${this.language}.`
 //     };
   
-  class Humanoid{
+  class Humanoid extends CharacterStats {
       constructor(chs){
         super(chs);
         this.team = chs.team;
